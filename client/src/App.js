@@ -39,15 +39,14 @@ export default function App () {
       
       {/* two routes with switch */}
       <Switch>
-        {/* one route for `/` that loads the `MovieList` component. This component will need the movies injected into it via props. */}
-        <Route path="/">
-          <MovieList movies={movieList}/>
-        </Route>
-
         {/* one route that will take an `id` parameter after`/movies/` (ex: `/movies/2`, `/movies/3` where the id is dynamic). This route should load the `Movie` component. */}
         <Route path="/movies/:id">
           <Movie movie={movieList}/>
         </Route>
+        {/* one route for `/` that loads the `MovieList` component. This component will need the movies injected into it via props. */}
+        <Route path="/">
+          <MovieList movies={movieList}/>
+        </Route>        
       </Switch>
     </div>
   );
