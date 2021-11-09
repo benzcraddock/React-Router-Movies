@@ -44,7 +44,7 @@ export default function App () {
           <Movie movie={movieList}/>
         </Route>
         {/* one route for `/` that loads the `MovieList` component. This component will need the movies injected into it via props. */}
-        <Route path="/">
+        <Route exact path="/">
           <MovieList movies={movieList}/>
         </Route>        
       </Switch>
